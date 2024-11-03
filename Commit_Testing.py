@@ -1,6 +1,6 @@
 # This is a basic file I will be utilizing to train and test my git skills
 # Python File
-def Top10ContentWords(s):
+def Words_and_Count(s):
     words_and_count = {}  # Initializes an empty dictionary
     delims = [ ' ', ',', '!', '.', '?', '\n', '\r' ]      # All possible delimiters necessary to split words
     s = s.lower()    # Makes entire string lowercase so things like "word" and "Word" will be considered the same
@@ -17,7 +17,13 @@ def Top10ContentWords(s):
     
     return words_and_count
 
-# Usage
-s = "Hi my name is Talon Roberts, how are we doing on this fine evening. What is your favorite flavor of Starburst?"
-word_counts = Top10ContentWords(s)
-print(word_counts)
+
+# Asking user for input
+user_input = input("Please enter a string to have the words counted: ")
+
+# Printing back user input
+print("You entered:", user_input)
+
+word_counts = Words_and_Count(user_input)
+print("Counted words from string:", word_counts)
+
